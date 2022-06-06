@@ -1,0 +1,61 @@
+.hero--section {
+  width: 95%;
+  margin: 0 auto;
+  padding: 3.6rem 0rem 0rem 0rem;
+  color: #434f44;
+  display: flex;
+  gap: 3.2rem;
+}
+
+.hero--header {
+  width: 55%;
+  padding: 0 0 0 4.8rem;
+}
+
+.hero--title {
+  font-size: 4.4rem;
+  font-weight: 700;
+  padding: 4.2rem 1.2rem 3.6rem 0;
+}
+
+.hero--text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.hero--image-box {
+  width: 45%;
+  margin: 0 auto;
+  padding: 3.6rem 0 0 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.hero--image {
+  height: 85%;
+}
+
+.call-to-action {
+  padding: 3.2rem 0 0 0rem;
+}
+
+.call-to-action--form {
+  padding: 1.8rem 0 0 0;
+}
+
+.call-to-action--title {
+  font-size: 1.8rem;
+}
+.call-to-action--form label {
+  display: inline-block;
+  padding: 0 1.2rem 0 0;
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.call-to-action--button {
+  margin-left: 2rem;
+  padding: 1rem 2.4rem;
+}
