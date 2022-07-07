@@ -1,6 +1,4 @@
 # Foodini Website (Desktop version)
-## Description
-Foodini is a company which makes individual meals for customers and delivers it on a daily basis.
 ### Webpage Characteristics
 Webpage Structure is implemented using HTML5. The navigation is implemented using anchors (as opposed to buttons suggested by React.js) for semantic reasons.
 While designing the webpage, main Web Design rules and conventions (Typography, colors, icon usage, visual hierarchy, etc.) have been considered.
