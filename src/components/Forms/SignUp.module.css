@@ -1,0 +1,47 @@
+.container {
+  width: 33%;
+  margin: 0 auto;
+  transition: all 0.3s;
+}
+
+.sign-up--form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 3rem;
+}
+
+.sign-up--form input {
+  display: block;
+  width: 100%;
+}
+
+.el1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.sign-up--form label {
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+}
+
+.el2 {
+  grid-column: 2/-1;
+  grid-row: 1/2;
+}
+.el2 label {
+  margin-bottom: 2rem;
+}
+.el3 {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+}
+.el4 {
+  grid-column: 1/-1;
+  grid-row: 3/4;
+}
+
+.el5 {
+  grid-column: 1/-1;
+  grid-row: 4/-1;
+}

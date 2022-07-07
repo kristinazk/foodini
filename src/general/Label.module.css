@@ -1,0 +1,8 @@
+.label {
+  display: inline-block;
+  padding: 0 1.2rem 0 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #5f7161;
+}

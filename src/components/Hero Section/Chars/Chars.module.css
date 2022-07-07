@@ -25,13 +25,16 @@
   flex-direction: column;
   gap: 1rem;
   line-height: 1.3;
+  transition: all 2s;
 }
 
 .chars--el h6 {
   padding-top: 2rem;
+  padding-bottom: 1rem;
   font-size: 1.4rem;
   transition: all 1s;
 }
+
 .chars--el p {
   transition: all 1s;
 }
@@ -53,12 +56,12 @@
   width: 36rem;
   height: 14rem;
   border-radius: 3rem;
-  transition: all 0.3s;
+  transition: all 0.5s;
   top: 37%;
   left: 2%;
   z-index: -1;
 }
 
-.hidden {
-  visibility: hidden;
+.chars--el--box {
+  transition: all 3s;
 }

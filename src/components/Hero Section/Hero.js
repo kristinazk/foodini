@@ -1,7 +1,18 @@
+import { useState } from 'react';
 import styles from './Hero.module.css';
 import Button from '../../general/Button';
 import Input from '../../general/Input';
+import Label from '../../general/Label';
+
 function Hero() {
+  const [emailIsValid, setEmailIsValid] = useState(null);
+  const [emailTouched, setEmailTouched] = useState(false);
+  function emailChangeHandler(e) {
+    setEmailIsValid(e.target.value.includes('@'));
+  }
+  function emailBlurHandler() {
+    setEmailTouched(true);
+  }
   return (
     <section className={styles['hero--section']}>
       <header className={styles['hero--header']}>
@@ -21,9 +32,17 @@ function Hero() {
             Want to learn More? Subscribe to Our Newsletter!
           </h3>
           <form className={styles['call-to-action--form']}>
-            <label htmlFor="email">Email</label>
-            <Input type="email" id="email" placeholder="me@example.com" />
-            <Button className={styles['call-to-action--button']}>Submit</Button>
+            <Label htmlFor="email">Email</Label>
+
+            <Input
+              type="email"
+              id="email"
+              placeholder="me@example.com"
+              onChange={emailChangeHandler}
+              onBlur={emailBlurHandler}
+              className={emailTouched && !emailIsValid && 'error--input'}
+            />
+            <Button className="btn__call-to-action">Submit</Button>
           </form>
         </div>
       </header>

@@ -1,0 +1,51 @@
+.container {
+  width: 20%;
+  margin: 0 auto;
+}
+
+/* .form--box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-self: center;
+}
+
+.form--box input {
+  flex-shrink: 2;
+}
+ */
+
+.login--form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sign-up--box {
+  margin-top: 4.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+}
+.sign-up--text {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.sign-up--link:link,
+.sign-up--link:visited {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.3rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #262d27;
+  transition: all 0.1s;
+}
+
+.sign-up--link:hover,
+.sign-up--link:active {
+  border-bottom: none;
+  /* animation: bounceOutRight;
+  animation-duration: 1s; */
+}

@@ -1,15 +1,49 @@
+import { useState, useRef } from 'react';
 import styles from './Plans.module.css';
 import Button from '../../general/Button';
+import Heading from '../../general/Heading';
 
 function Plans() {
+  const plan1 = useRef();
+  const plan2 = useRef();
+  const plan3 = useRef();
+  const plans = [plan1, plan2, plan3];
+
+  const [selectedState, setSelectedState] = useState(false);
+
+  // function sectionHandler(e) {
+  //   e.stopEventPropagation();
+  //   setSelectedState(false);
+  //   if (!selectedState) {
+  //     plans.forEach((plan) => plan.current.classList.remove('selectedPlan'));
+  //   }
+  // }
+  function planClickHandler1() {
+    setSelectedState(true);
+    plans.forEach((plan) => plan.current.classList.remove('selectedPlan'));
+    plan1.current.classList.add('selectedPlan');
+  }
+  function planClickHandler2() {
+    setSelectedState(true);
+    plans.forEach((plan) => plan.current.classList.remove('selectedPlan'));
+    plan2.current.classList.add('selectedPlan');
+  }
+  function planClickHandler3() {
+    setSelectedState(true);
+    plans.forEach((plan) => plan.current.classList.remove('selectedPlan'));
+    plan3.current.classList.add('selectedPlan');
+  }
+
   return (
     <section className={styles['plans--section']}>
-      <h1 className={styles['plans--title']}>
+      <Heading className="plans--title">
         Our Monthly Plans are Designed Especially for You
-      </h1>
+      </Heading>
       <div className={styles['plans--container']}>
         <div
           className={`${styles['plans--plan']} ${styles['plans--plan__medium']}`}
+          onClick={planClickHandler1}
+          ref={plan1}
         >
           <h2 className={styles['plan--title']}>Medium</h2>
           <p className={styles['plan--price']}>
@@ -36,6 +70,8 @@ function Plans() {
         </div>
         <div
           className={`${styles['plans--plan']} ${styles['plans--plan__complete']}`}
+          onClick={planClickHandler2}
+          ref={plan2}
         >
           <h2 className={styles['plan--title']}>Complete</h2>
           <p className={styles['plan--price']}>
@@ -62,6 +98,8 @@ function Plans() {
         </div>
         <div
           className={`${styles['plans--plan']} ${styles['plans--plan__starter']}`}
+          onClick={planClickHandler3}
+          ref={plan3}
         >
           <h2 className={styles['plan--title']}>Starter</h2>
           <p className={styles['plan--price']}>
@@ -87,7 +125,7 @@ function Plans() {
           </ul>
         </div>
       </div>
-      {<Button className={styles.button}>Choose</Button>}
+      {selectedState && <Button className="btn__plans">Choose</Button>}
     </section>
   );
 }
